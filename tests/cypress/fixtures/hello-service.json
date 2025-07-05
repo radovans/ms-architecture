@@ -1,0 +1,9 @@
+{
+  "validHelloResponse": {
+    "message": "Hello, World!"
+  },
+  "testData": {
+    "serviceName": "hello-service",
+    "endpoint": "/api/v1/hello"
+  }
+} 

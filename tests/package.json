@@ -1,0 +1,26 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "test:headless": "cypress run --headless",
+    "test:record": "cypress run --record",
+    "test:api": "cypress run --spec 'cypress/e2e/**/*.cy.js'",
+    "test:hello": "cypress run --spec 'cypress/e2e/hello-service.cy.js'",
+    "test:advanced": "cypress run --spec 'cypress/e2e/advanced-api-tests.cy.js'",
+    "test:local": "cypress run --config-file cypress.config.local.js",
+    "test:debug": "cypress run --headed --no-exit",
+    "test:parallel": "cypress run --parallel --record",
+    "test:smoke": "cypress run --spec 'cypress/e2e/hello-service.cy.js' --env grepTags='@smoke'",
+    "test:regression": "cypress run --spec 'cypress/e2e/**/*.cy.js' --env grepTags='@regression'"
+  },
+  "keywords": ["cypress", "api-testing", "spring-boot"],
+  "author": "",
+  "license": "ISC",
+  "description": "Cypress tests for Spring Boot microservices",
+  "devDependencies": {
+    "cypress": "^13.6.0"
+  }
+}
