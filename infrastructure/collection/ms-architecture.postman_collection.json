@@ -4,7 +4,7 @@
 		"name": "ms-architecture",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "2291040",
-		"_collection_link": "https://gold-shadow-538393.postman.co/workspace/ms-architecture~b8300d29-a0fb-40fd-9e22-be4d3c24303d/collection/2291040-6e82ce26-4835-4ca5-bc61-8c7cd364079c?action=share&source=collection_link&creator=2291040"
+		"_collection_link": "https://gold-shadow-538393.postman.co/workspace/b8300d29-a0fb-40fd-9e22-be4d3c24303d/collection/2291040-6e82ce26-4835-4ca5-bc61-8c7cd364079c?action=share&source=collection_link&creator=2291040"
 	},
 	"item": [
 		{
@@ -235,6 +235,32 @@
 								"protocol",
 								"openid-connect",
 								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hello service",
+			"item": [
+				{
+					"name": "Hello world",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{server}}:{{hello-service-port}}/api/v1/hello",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "{{hello-service-port}}",
+							"path": [
+								"api",
+								"v1",
+								"hello"
 							]
 						}
 					},
