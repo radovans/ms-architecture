@@ -1,39 +1,52 @@
-# Spring Boot Microservices Example
+# MS Architecture - Microservices Showcase
 
-## Description
-This project demonstrates a simple microservice architecture using Spring Boot. It showcases the core principles of microservices such as 
-modularization, scalability, and inter-service communication.
+A comprehensive microservices architecture project demonstrating Java programming skills, modern software engineering practices, and enterprise-level system design.
 
-## Prerequisites
+## Project Structure
+
+```
+ms-architecture/
+├── backend/             # Backend microservices (Java/Spring Boot)
+├── frontend/            # Frontend applications (React/TypeScript)
+├── infrastructure/      # Docker, deployment, and infrastructure configs
+│   ├── docker/          # Docker Compose and container configs
+│   ├── keycloak/        # Keycloak configuration and scripts
+│   ├── status-page/     # Status page infrastructure
+│   └── collection/      # Postman collections for API testing
+├── tests/               # Comprehensive test suites
+└── docs/                # Project documentation
+```
+
+## Quick Start
+
+### Prerequisites
 - Java 21
-- Docker
+- Docker & Docker Compose
+- Node.js 18+ (for frontend development)
 
-## Installation
-- Clone the repository
-- Run the following command to start the services using Docker Compose:
-  ```bash
-  docker-compose up --build -d
-  ```
-- Import Keycloak realm into Keycloak
-  ```bash
-  sh keycloak/keycloak.sh import
-  ```
+### Local Development Setup
 
-## Keycloak
-- Open Keycloak admin console in browser
-  ```bash
-  open http://localhost:9090/
-  ```
-- Login with admin credentials
-  - Username: `admin`
-  - Password: `admin`
+1. **Start Infrastructure Services**
+   ```bash
+   cd infrastructure/docker
+   docker-compose up --build -d
+   ```
+
+2. **Setup Keycloak**
+   ```bash
+   cd infrastructure/keycloak
+   sh keycloak.sh import
+   ```
+
+3. **Access Services**
+   - Keycloak Admin Console: http://localhost:9090
+     - Username: `admin`
+     - Password: `admin`
+   - Status Page: http://localhost:8090
 
 ### Export/Import Keycloak realm
 - Export Keycloak realm
   ```bash
-  sh keycloak/keycloak.sh export
-  ```
-- Import realm into Keycloak
-  ```bash
-  sh keycloak/keycloak.sh import
+  cd infrastructure/keycloak
+  sh keycloak.sh export
   ```

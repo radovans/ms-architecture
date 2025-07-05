@@ -1,3 +1,5 @@
+name: ms-services
+
 services:
   keycloak_postgres:
     image: postgres:15
@@ -42,11 +44,11 @@ services:
     networks:
       - keycloak-network
     volumes:
-      - ./keycloak/export:/tmp/keycloak-export
+      - ../keycloak/export:/tmp/keycloak-export
 
   status_page:
     build:
-      context: ./status-page
+      context: ../status-page
     container_name: status_page
     ports:
       - "8090:80"
